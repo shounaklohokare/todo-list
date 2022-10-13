@@ -40,7 +40,9 @@ function deleteCheck(e){
     // delete item
     if(item.classList[0] === 'trash-btn'){
         item.parentElement.remove();
-    }else if(item.classList[0] === 'complete-btn'){
-        item.classList.toggle('complete-btn');
+    }
+    // mark as complete
+    else if(item.classList[0] === 'complete-btn'){
+        item.parentElement.classList.toggle('completed');
     }
 }

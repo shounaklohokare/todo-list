@@ -78,11 +78,15 @@ form button:hover{
     background-color: rgb(73, 204, 73);
 }
 
-
 .todo-item{
     padding : 0rem 0.5rem;
 }
 
 .fa-trash, fa-check{
     pointer-events : none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
 }
