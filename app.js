@@ -39,7 +39,12 @@ function deleteCheck(e){
     const item = e.target;
     // delete item
     if(item.classList[0] === 'trash-btn'){
-        item.parentElement.remove();
+        const todo = item.parentElement;
+        todo.classList.add('fall');
+        todo.addEventListener('transitionend', function(){
+            todo.remove();
+        });
+
     }
     // mark as complete
     else if(item.classList[0] === 'complete-btn'){
